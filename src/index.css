@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Één thema: donker + Silversant groen ── */
+  --color-black:      #070a07;   /* diepste achtergrond */
+  --color-dark:       #0d130c;   /* vlakken / kaarten   */
+  --color-mid:        #172415;   /* subtiele contrast    */
+  --color-accent:     #33a670;   /* Silversant groen     */
+  --color-accent-dim: #267a54;   /* hover / donkerder    */
+  --color-white:      #f0ece3;   /* tekst / off-white    */
+  --color-muted:      #5c7a69;   /* secondary tekst      */
+
+  --font-display: "Oswald", sans-serif;
+  --font-body:    "IBM Plex Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .label-bar {
+    @apply inline-block bg-black px-4 py-2 font-display text-sm font-medium uppercase tracking-[0.15em] text-white;
+  }
+
+  .section-pad {
+    @apply px-5 py-20 md:px-10 md:py-28 lg:px-16;
+  }
+}
