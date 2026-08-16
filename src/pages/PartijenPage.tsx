@@ -35,11 +35,11 @@ export function PartijenPage() {
               ))}
             </Stagger>
 
-            <Reveal className="mt-10 flex flex-wrap gap-4">
-              <Button href={PARTIJEN.pdf} external variant="brass">
+            <Reveal className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+              <Button href={PARTIJEN.pdf} external variant="brass" className="w-full sm:w-auto">
                 Download info PDF
               </Button>
-              <Button to="/contact" variant="outline">
+              <Button to="/contact" variant="outline" className="w-full sm:w-auto">
                 Offerte aanvragen
               </Button>
             </Reveal>

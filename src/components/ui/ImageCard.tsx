@@ -35,8 +35,8 @@ export function ImageCard({ image, label, subtitle, href, to, external, action =
       </div>
 
       {/* Label + actie-balk — altijd zichtbaar onder de foto */}
-      <div className="flex items-center justify-between gap-4 bg-black px-5 py-4">
-        <div>
+      <div className="flex flex-col gap-3 bg-black px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5">
+        <div className="min-w-0">
           <p className="font-display text-sm font-medium uppercase tracking-[0.15em] text-white">
             {label}
           </p>
@@ -44,7 +44,7 @@ export function ImageCard({ image, label, subtitle, href, to, external, action =
             <p className="mt-0.5 text-xs text-muted">{subtitle}</p>
           )}
         </div>
-        <span className="shrink-0 bg-accent px-4 py-2 font-display text-[10px] font-medium uppercase tracking-[0.15em] text-black transition-colors group-hover:bg-accent-dim">
+        <span className="inline-flex min-h-11 shrink-0 items-center justify-center self-start bg-accent px-4 py-2.5 font-display text-[10px] font-medium uppercase tracking-[0.15em] text-black transition-colors group-hover:bg-accent-dim sm:self-auto">
           {action}
         </span>
       </div>

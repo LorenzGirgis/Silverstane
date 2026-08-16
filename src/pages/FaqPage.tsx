@@ -21,9 +21,9 @@ export function FaqPage() {
                 <button
                   type="button"
                   onClick={() => setOpen(open === i ? null : i)}
-                  className="flex w-full items-center justify-between py-6 text-left"
+                  className="flex min-h-14 w-full items-center justify-between gap-4 py-4 text-left sm:py-6"
                 >
-                  <span className="font-display text-lg uppercase tracking-wide">{item.q}</span>
+                  <span className="font-display text-base uppercase tracking-wide sm:text-lg">{item.q}</span>
                   <motion.span
                     animate={{ rotate: open === i ? 45 : 0 }}
                     className="ml-4 shrink-0 font-display text-2xl text-accent"

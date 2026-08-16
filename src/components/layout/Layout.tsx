@@ -8,7 +8,7 @@ export function Layout() {
     <>
       <ScrollToTop />
       <Header />
-      <main className="min-h-screen pt-[88px] md:pt-[120px]">
+      <main className="min-h-screen header-offset">
         <Outlet />
       </main>
       <Footer />

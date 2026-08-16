@@ -19,7 +19,7 @@ export function ContactPage() {
       </PageHeader>
 
       <section className="section-pad">
-        <div className="mx-auto grid max-w-[1400px] gap-12 lg:grid-cols-5">
+        <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-5 lg:gap-12">
           <Reveal className="lg:col-span-2">
             <div className="space-y-8">
               {[
@@ -79,14 +79,14 @@ export function ContactPage() {
                         id="message"
                         name="message"
                         rows={4}
-                        className="w-full border border-white/10 bg-black px-4 py-3 text-white focus:border-accent/50 focus:outline-none"
+                        className="w-full border border-white/10 bg-black px-4 py-3.5 text-white focus:border-accent/50 focus:outline-none"
                         placeholder="Wat is je verzoek?"
                       />
                     </div>
                   </div>
                   <button
                     type="submit"
-                    className="mt-6 bg-accent px-8 py-3.5 font-display text-xs uppercase tracking-[0.18em] text-black transition-colors hover:bg-accent-dim"
+                    className="mt-6 min-h-11 w-full bg-accent px-8 py-3.5 font-display text-xs uppercase tracking-[0.18em] text-black transition-colors hover:bg-accent-dim sm:w-auto"
                   >
                     Verzenden
                   </button>
@@ -113,7 +113,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full border border-white/10 bg-black px-4 py-3 text-white focus:border-accent/50 focus:outline-none"
+        className="w-full border border-white/10 bg-black px-4 py-3.5 text-white focus:border-accent/50 focus:outline-none"
         {...rest}
       />
     </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { type ReactNode } from "react";
 
 const base =
-  "inline-flex items-center justify-center font-display text-xs font-medium uppercase tracking-[0.18em] transition-colors duration-200";
+  "inline-flex min-h-11 items-center justify-center font-display text-xs font-medium uppercase tracking-[0.18em] transition-colors duration-200";
 
 const variants = {
   brass: `${base} bg-accent px-6 py-3.5 text-black hover:bg-accent-dim`,

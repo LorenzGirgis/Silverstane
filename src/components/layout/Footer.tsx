@@ -6,11 +6,11 @@ export function Footer() {
     <footer className="border-t border-white/8 bg-dark">
       <div className="mx-auto max-w-[1400px] section-pad">
 
-        <div className="grid gap-x-12 gap-y-10 md:grid-cols-[1fr_auto_auto]">
+        <div className="grid gap-x-12 gap-y-10 sm:grid-cols-2 md:grid-cols-[1fr_auto_auto]">
 
           {/* Kolom 1: Silversant + uren + Kees compact */}
           <div>
-            <p className="font-display text-3xl font-medium uppercase tracking-wider text-white">
+            <p className="font-display text-2xl font-medium uppercase tracking-wider text-white sm:text-3xl">
               Silversant
             </p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted">
@@ -44,13 +44,13 @@ export function Footer() {
             <ul className="space-y-2">
               {NAV.map((item) => (
                 <li key={item.to}>
-                  <Link to={item.to} className="text-sm text-muted transition-colors hover:text-white">
+                  <Link to={item.to} className="inline-flex min-h-10 items-center text-sm text-muted transition-colors hover:text-white">
                     {item.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link to="/faq" className="text-sm text-muted transition-colors hover:text-white">FAQ</Link>
+                <Link to="/faq" className="inline-flex min-h-10 items-center text-sm text-muted transition-colors hover:text-white">FAQ</Link>
               </li>
             </ul>
           </div>

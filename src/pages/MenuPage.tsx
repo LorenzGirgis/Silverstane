@@ -371,14 +371,14 @@ export function MenuPage() {
       </PageHeader>
 
       {/* Tab-balk */}
-      <div className="sticky top-[88px] z-30 overflow-x-auto border-b border-white/10 bg-black/95 backdrop-blur-sm md:top-[120px]">
-        <div className="mx-auto flex max-w-[1400px] gap-0 px-5">
+      <div className="sticky-below-header z-30 overflow-x-auto border-b border-white/10 bg-black/95 backdrop-blur-sm [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="mx-auto flex max-w-[1400px] snap-x snap-mandatory gap-0 px-4 sm:px-5">
           {MENU.map((t, i) => (
             <button
               key={t.slug}
               type="button"
               onClick={() => setActive(i)}
-              className={`relative shrink-0 px-5 py-4 font-display text-[11px] uppercase tracking-[0.18em] transition-colors ${
+              className={`relative shrink-0 snap-start px-3 py-3.5 font-display text-[10px] uppercase tracking-[0.14em] transition-colors sm:px-5 sm:py-4 sm:text-[11px] sm:tracking-[0.18em] ${
                 i === active ? "text-accent" : "text-muted hover:text-white"
               }`}
             >
@@ -403,15 +403,15 @@ export function MenuPage() {
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Hero-afbeelding van het kaarttype */}
-          <div className="relative h-40 overflow-hidden md:h-56">
+          <div className="relative h-32 overflow-hidden sm:h-40 md:h-56">
             <img
               src={tab.image}
               alt={tab.label}
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-            <div className="absolute inset-0 flex items-center px-5 md:px-10 lg:px-16">
-              <span className="label-bar text-base md:text-xl">{tab.label}</span>
+            <div className="absolute inset-0 flex items-center px-4 sm:px-5 md:px-10 lg:px-16">
+              <span className="label-bar text-sm sm:text-base md:text-xl">{tab.label}</span>
             </div>
           </div>
 
@@ -425,20 +425,20 @@ export function MenuPage() {
                 </Reveal>
               )}
 
-              <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-3">
                 {tab.sections.map((section) => (
                   <Reveal key={section.title}>
                     <div>
-                      <h2 className="mb-5 font-display text-sm uppercase tracking-[0.2em] text-accent">
+                      <h2 className="mb-4 font-display text-xs uppercase tracking-[0.2em] text-accent sm:mb-5 sm:text-sm">
                         {section.title}
                       </h2>
                       <ul className="space-y-0 divide-y divide-white/8">
                         {section.items.map((item) => (
-                          <li key={item.name} className="flex items-baseline justify-between gap-4 py-3">
-                            <div>
+                          <li key={item.name} className="flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
+                            <div className="min-w-0">
                               <span className="text-sm text-white">{item.name}</span>
                               {item.note && (
-                                <span className="ml-2 text-xs text-muted/70">{item.note}</span>
+                                <span className="mt-0.5 block text-xs text-muted/70 sm:ml-2 sm:mt-0 sm:inline">{item.note}</span>
                               )}
                             </div>
                             {item.price && (

@@ -18,10 +18,10 @@ export function PageHeader({ overline, title, children, dark = true }: PageHeade
               {overline}
             </p>
           )}
-          <h1 className="font-display text-5xl font-medium uppercase leading-[0.95] tracking-wide md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-[clamp(2.75rem,12vw,5rem)] font-medium uppercase leading-[0.95] tracking-wide md:text-7xl lg:text-8xl">
             {title}
           </h1>
-          {children && <div className={`mt-6 max-w-xl text-base leading-relaxed ${dark ? "text-muted" : "text-accent-dim"}`}>{children}</div>}
+          {children && <div className={`mt-4 max-w-xl text-sm leading-relaxed sm:mt-6 sm:text-base ${dark ? "text-muted" : "text-accent-dim"}`}>{children}</div>}
         </Reveal>
       </div>
     </section>
