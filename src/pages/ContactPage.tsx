@@ -14,8 +14,8 @@ export function ContactPage() {
 
   return (
     <>
-      <PageHeader overline="Contact" title="Borrel organiseren">
-        <p>Wil je een borreltje organiseren? Vul het formulier in en we komen bij je terug.</p>
+      <PageHeader overline="Reserveren" title="Contact">
+        <p>{CONTACT.reservationNote}. Reservations only from 6 people.</p>
       </PageHeader>
 
       <section className="section-pad">
@@ -40,7 +40,6 @@ export function ContactPage() {
                 <p className="font-display text-[10px] uppercase tracking-[0.25em] text-accent">Openingstijden</p>
                 <p className="mt-1 text-muted">{CONTACT.hours.weekday}</p>
                 <p className="text-muted">{CONTACT.hours.weekend}</p>
-                <p className="text-muted">{CONTACT.hours.sunday}</p>
               </div>
             </div>
           </Reveal>
@@ -66,37 +65,30 @@ export function ContactPage() {
                   animate={{ opacity: 1 }}
                 >
                   <div className="grid gap-5 sm:grid-cols-2">
-                    <Field label="Naam" name="name" required className="sm:col-span-2" />
-                    <Field label="E-mail" name="email" type="email" required />
-                    <Field label="Telefoonnummer" name="phone" type="tel" />
+                    <Field label="Voornaam" name="firstname" required />
+                    <Field label="Achternaam" name="lastname" required />
+                    <Field label="Aantal personen" name="guests" type="number" min={6} required className="sm:col-span-2" />
                     <Field label="Datum" name="date" type="date" />
                     <Field label="Tijd" name="time" type="time" />
-                    <Field label="Aantal personen" name="guests" type="number" min={1} />
-                    <Field label="Gelegenheid" name="occasion" className="sm:col-span-2" />
+                    <Field label="Telefoon" name="phone" type="tel" />
+                    <Field label="E-mail" name="email" type="email" required />
+                    <Field label="Onderwerp" name="subject" required className="sm:col-span-2" />
                     <div className="sm:col-span-2">
-                      <label htmlFor="message" className="mb-1.5 block text-[11px] uppercase tracking-wider text-muted">
-                        Wensen / vragen / bijzonderheden
-                      </label>
+                      <label htmlFor="message" className="mb-1.5 block text-[11px] uppercase tracking-wider text-muted">Bericht</label>
                       <textarea
                         id="message"
                         name="message"
                         rows={4}
                         className="w-full border border-white/10 bg-black px-4 py-3.5 text-white focus:border-accent/50 focus:outline-none"
-                        placeholder="Vertel ons over je plannen..."
+                        placeholder="Wat is je verzoek?"
                       />
-                    </div>
-                    <div className="sm:col-span-2">
-                      <label className="flex items-start gap-3 text-sm text-muted">
-                        <input type="checkbox" name="consent" required className="mt-1 accent-accent" />
-                        Akkoord op gebruik van gegevens voor contact
-                      </label>
                     </div>
                   </div>
                   <button
                     type="submit"
                     className="mt-6 min-h-11 w-full bg-accent px-8 py-3.5 font-display text-xs uppercase tracking-[0.18em] text-black transition-colors hover:bg-accent-dim sm:w-auto"
                   >
-                    Verstuur
+                    Verzenden
                   </button>
                 </motion.form>
               )}

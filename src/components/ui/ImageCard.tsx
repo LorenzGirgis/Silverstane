@@ -14,7 +14,7 @@ type ImageCardProps = {
 export function ImageCard({ image, label, subtitle, href, to, external, action = "Bekijk" }: ImageCardProps) {
   const inner = (
     <motion.article
-      className="group relative overflow-hidden rounded-sm bg-mid shadow-sm"
+      className="group relative overflow-hidden bg-mid"
       whileHover="hover"
       initial="rest"
     >
@@ -35,16 +35,16 @@ export function ImageCard({ image, label, subtitle, href, to, external, action =
       </div>
 
       {/* Label + actie-balk — altijd zichtbaar onder de foto */}
-      <div className="flex flex-col gap-3 bg-dark px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5">
+      <div className="flex flex-col gap-3 bg-black px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5">
         <div className="min-w-0">
-          <p className="font-body text-sm font-semibold text-white">
+          <p className="font-display text-sm font-medium uppercase tracking-[0.15em] text-white">
             {label}
           </p>
           {subtitle && (
             <p className="mt-0.5 text-xs text-muted">{subtitle}</p>
           )}
         </div>
-        <span className="inline-flex min-h-11 shrink-0 items-center justify-center self-start bg-accent px-4 py-2.5 font-display text-[10px] font-medium uppercase tracking-[0.15em] text-[#f5f0e8] transition-colors group-hover:bg-accent-dim sm:self-auto">
+        <span className="inline-flex min-h-11 shrink-0 items-center justify-center self-start bg-accent px-4 py-2.5 font-display text-[10px] font-medium uppercase tracking-[0.15em] text-black transition-colors group-hover:bg-accent-dim sm:self-auto">
           {action}
         </span>
       </div>

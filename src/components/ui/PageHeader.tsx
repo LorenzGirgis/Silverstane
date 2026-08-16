@@ -14,14 +14,14 @@ export function PageHeader({ overline, title, children, dark = true }: PageHeade
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           {overline && (
-            <p className="mb-3 font-body text-[10px] uppercase tracking-[0.3em] text-accent">
+            <p className={`mb-3 font-display text-[10px] uppercase tracking-[0.3em] ${dark ? "text-accent" : "text-accent-dim"}`}>
               {overline}
             </p>
           )}
-          <h1 className="font-display text-[clamp(2.5rem,10vw,5.5rem)] italic leading-[1.05] md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-[clamp(2.75rem,12vw,5rem)] font-medium uppercase leading-[0.95] tracking-wide md:text-7xl lg:text-8xl">
             {title}
           </h1>
-          {children && <div className={`mt-4 max-w-xl font-body text-sm leading-relaxed sm:mt-6 sm:text-base ${dark ? "text-muted" : "text-muted"}`}>{children}</div>}
+          {children && <div className={`mt-4 max-w-xl text-sm leading-relaxed sm:mt-6 sm:text-base ${dark ? "text-muted" : "text-accent-dim"}`}>{children}</div>}
         </Reveal>
       </div>
     </section>

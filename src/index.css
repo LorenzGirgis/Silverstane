@@ -1,29 +1,27 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Café Thijs: licht cream + Thijs groen ── */
-  --color-black:      #f5f0e8;   /* cream — hoofdachtergrond     */
-  --color-dark:       #ece5d6;   /* iets dieper — secties        */
-  --color-mid:        #e2d8c5;   /* kaarten / formulieren        */
-  --color-accent:     #3a9466;   /* Café Thijs groen             */
-  --color-accent-dim: #2d7350;   /* hover / donkerder            */
-  --color-white:      #1e1a12;   /* donkere tekst                */
-  --color-muted:      #7a6e5e;   /* secundaire tekst             */
-  --color-ink:        #1e1a12;   /* altijd donker (hero/overlays) */
-  --color-brass:      #c9a84c;
+  /* ── Één thema: donker + Silversant groen ── */
+  --color-black:      #070a07;   /* diepste achtergrond */
+  --color-dark:       #0d130c;   /* vlakken / kaarten   */
+  --color-mid:        #172415;   /* subtiele contrast    */
+  --color-accent:     #33a670;   /* Silversant groen     */
+  --color-accent-dim: #267a54;   /* hover / donkerder    */
+  --color-white:      #f0ece3;   /* tekst / off-white    */
+  --color-muted:      #5c7a69;   /* secondary tekst      */
 
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Oswald", sans-serif;
   --font-body:    "IBM Plex Sans", system-ui, sans-serif;
 }
 
 @layer base {
   :root {
-    --header-height: 4.5rem;
+    --header-height: 4rem;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     :root {
-      --header-height: 9rem;
+      --header-height: 7.5rem;
     }
   }
 
@@ -71,7 +69,7 @@
   }
 
   .label-bar {
-    @apply inline-block bg-ink px-3 py-2 font-body text-xs font-medium uppercase tracking-[0.15em] text-[#f5f0e8] md:px-4 md:text-sm;
+    @apply inline-block bg-black px-3 py-2 font-display text-xs font-medium uppercase tracking-[0.15em] text-white md:px-4 md:text-sm;
   }
 
   .section-pad {

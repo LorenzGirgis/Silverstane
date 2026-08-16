@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { type ReactNode } from "react";
 
 const base =
-  "inline-flex min-h-11 items-center justify-center font-body text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-200 rounded-sm";
+  "inline-flex min-h-11 items-center justify-center font-display text-xs font-medium uppercase tracking-[0.18em] transition-colors duration-200";
 
 const variants = {
-  brass: `${base} bg-accent px-6 py-3.5 text-[#f5f0e8] hover:bg-accent-dim`,
-  outline: `${base} border border-white/40 px-6 py-3.5 text-white hover:border-accent hover:text-accent`,
-  ghost: `${base} px-4 py-2 text-muted hover:text-ink`,
+  brass: `${base} bg-accent px-6 py-3.5 text-black hover:bg-accent-dim`,
+  outline: `${base} border border-white/25 px-6 py-3.5 text-white hover:border-white/50 hover:bg-white/5`,
+  ghost: `${base} px-4 py-2 text-muted hover:text-white`,
 } as const;
 
 type ButtonProps = {
