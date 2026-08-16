@@ -409,7 +409,7 @@ export function MenuPage() {
               alt={tab.label}
               className="h-full w-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-ink/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
             <div className="absolute inset-0 flex items-center px-5 md:px-10 lg:px-16">
               <span className="label-bar text-base md:text-xl">{tab.label}</span>
             </div>

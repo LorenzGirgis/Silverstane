@@ -28,7 +28,7 @@ export function HomePage() {
           />
         ))}
         <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-ink/30 to-ink/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/60" />
 
         <div className="relative mx-auto w-full max-w-[1400px] px-5 pb-16 pt-10 text-center md:px-6 md:pb-24">
           <motion.p
